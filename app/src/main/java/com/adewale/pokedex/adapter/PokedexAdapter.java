@@ -10,6 +10,13 @@ import android.widget.TextView;
 import com.adewale.pokedex.PokemonActivity;
 import com.adewale.pokedex.R;
 import com.adewale.pokedex.model.Pokemon;
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.toolbox.JsonObjectRequest;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.Arrays;
 import java.util.List;
@@ -46,18 +53,7 @@ public class PokedexAdapter extends Adapter<PokedexViewHolder> {
         }
     }
 
-    private List<Pokemon> pokemons = Arrays.asList(
-            new Pokemon("Adewale",1, "First name"),
-            new Pokemon("Computer",2, "Passino"),
-            new Pokemon("Bill",3, "Favorite billionaire"),
-            new Pokemon("Gate",4, "Philantrophist"),
-            new Pokemon("Paul Allen",5, "Mentor"),
-            new Pokemon("Mark Zuckerberg",6, "Outlier"),
-            new Pokemon("Donald J",7, "Mad man"),
-            new Pokemon("Ayokanmi",8, "Middlename"),
-            new Pokemon("Prof",9, "Academic qualifications"),
-            new Pokemon("Adeleye", 10, "Computer")
-    );
+    private List<Pokemon> pokemons = Arrays.asList();
 
     @NonNull
     @Override
@@ -88,5 +84,20 @@ public class PokedexAdapter extends Adapter<PokedexViewHolder> {
 
     public void setPokemons(List<Pokemon> pokemons) {
         this.pokemons = pokemons;
+    }
+
+    private void loadPokeDex(){
+        String url = "https://pokeapi.co/api/v2/pokemon?limit=100";
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                try {
+                    JSONArray results = response.getJSONArray("results");
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
     }
 }
