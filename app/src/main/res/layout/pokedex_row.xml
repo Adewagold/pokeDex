@@ -18,6 +18,8 @@
         android:id="@+id/pokedex_row_text_view"
         />
 
+
+
     <View
         android:id="@+id/divider"
         android:layout_width="match_parent"
@@ -29,31 +31,5 @@
         android:clickable="true"
         android:focusable="true"
         android:foreground="?android:selectableItemBackground"/>
-
-    <LinearLayout
-        android:id="@+id/horizontal_layout"
-        android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/buttoncancel"
-            android:layout_width="314dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:contentDescription="@android:string/copy"
-            android:text="Button" />
-
-        <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#004C1919"
-            android:contentDescription="@android:string/cancel"
-            android:src="@android:drawable/ic_input_add"
-            tools:src="@android:drawable/ic_input_add"
-            tools:srcCompat="@tools:sample/avatars" />
-    </LinearLayout>
 
 </LinearLayout>

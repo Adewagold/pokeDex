@@ -2,21 +2,26 @@ package com.adewale.pokedex.model;
 
 public class Pokemon {
     private String name;
-    private int number;
+    private String url;
     private String title;
 
-    public Pokemon(String name, int number, String title) {
+    public Pokemon(String name, String url, String title) {
         this.name = name;
-        this.number = number;
+        this.url = url;
         this.title = title;
+    }
+
+    public Pokemon(String name, String url) {
+        this.name = name;
+        this.url = url;
     }
 
     public String getName() {
         return name;
     }
 
-    public int getNumber() {
-        return number;
+    public String getUrl() {
+        return url;
     }
 
     public String getTitle() {

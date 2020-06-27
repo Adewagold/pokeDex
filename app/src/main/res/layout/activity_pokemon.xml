@@ -22,4 +22,22 @@
         android:paddingTop="10dp"
         android:id="@+id/pokemon_number"/>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        android:paddingTop="10dp"
+        android:id="@+id/pokedex_row_textType1"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        android:paddingTop="10dp"
+        android:id="@+id/pokedex_row_textType2"
+        />
+
 </LinearLayout>
